@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    >
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Weather Dashboard</title>
+  </head>
+  <body>
+    <header id="headerContainer" class="container">
+      <h1 id="headerText" class="center-align">Weather Dashboard</h1>
+    </header>
+    <main id="mainContainer">
+      <div class="row">
+        <div class="col s2">
+          <h4 class="center-align">Search for a City:</h4>
+          <input
+            type="text"
+            class="form-input w-100"
+            id="citySearch"
+            name="citySearch"
+            placeholder="Raleigh"
+          />
+          <button class="waves-effect waves-light btn" id="searchBtn">
+            Search
+          </button>
+        </div>
+
+        <h3 case="cityDate">Atlanta 3/30/21</h3>
+        <div class="col s10">
+          <table>
+            <thead>
+              <tr>
+                <th>Temp</th>
+                <th>Wind</th>
+                <th>Humidity</th>
+                <th>UV Index</th>
+              </tr>
+            </thead>  
+            <tbody>  
+              <tr>
+                <td id="currentTemp"></td>
+                <td id="currentWind"></td>
+                <td id="currentHumidity"></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <h6>5 day forecast</h6>
+          <div class="col s2"> 
+            <div class="card">
+                    <div class="card-image" id="dayOneCard">
+                        <img src="assets/images/sample-1.jpg">
+                        <span class="card-title">Date</span>
+                    </div>    
+                        <div class="card-content">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>Temp</td>
+                                        <td>74 °F</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Wind</td>
+                                        <td>7 MPH</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Humidity</td>
+                                        <td>66%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                </div>
+            </div>
+            <div class="col s2"> 
+                <div class="card">
+                        <div class="card-image" id="dayOneCard">
+                            <img src="assets/images/sample-1.jpg">
+                            <span class="card-title">Date</span>
+                        </div>    
+                            <div class="card-content">
+                                <table>
+                                    <tbody>
+                                    <tr>
+                                        <td>Temp</td>
+                                        <td>74 °F</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Wind</td>
+                                        <td>7 MPH</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Humidity</td>
+                                        <td>66%</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                    </div>
+                </div>
+                <div class="col s2"> 
+                    <div class="card">
+                            <div class="card-image" id="dayOneCard">
+                                <img src="assets/images/sample-1.jpg">
+                                <span class="card-title">Date</span>
+                            </div>    
+                                <div class="card-content">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td>Temp</td>
+                                                <td>74 °F</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Wind</td>
+                                                <td>7 MPH</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Humidity</td>
+                                                <td>66%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col s2"> 
+                        <div class="card">
+                                <div class="card-image" id="dayOneCard">
+                                    <img src="assets/images/sample-1.jpg">
+                                    <span class="card-title">Date</span>
+                                </div>    
+                                    <div class="card-content">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Temp</td>
+                                                    <td>74 °F</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Wind</td>
+                                                    <td>7 MPH</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Humidity</td>
+                                                    <td>66%</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="col s2"> 
+                            <div class="card">
+                                    <div class="card-image" id="dayOneCard">
+                                        <img src="assets/images/sample-1.jpg">
+                                        <span class="card-title">Date</span>
+                                    </div>    
+                                        <div class="card-content">
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Temp</td>
+                                                        <td>74 °F</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Wind</td>
+                                                        <td>7 MPH</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Humidity</td>
+                                                        <td>66%</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                </div>
+                            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
