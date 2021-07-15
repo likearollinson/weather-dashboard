@@ -1,5 +1,5 @@
 var APIkey = "&appid=a8036eed98a36f905e6ad2de800b6c58";
-var currentWeatherURL = "api.openweathermap.org/data/2.5/weather?q=";
+var currentWeatherURL = "https://api.openweathermap.org/data/2.5/weather?q=";
 
 $("#searchBtn").click (function () {
     var currentRequestURL = currentWeatherURL + $("#citySearch").val() + APIkey;
