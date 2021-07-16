@@ -35,19 +35,15 @@ $("#searchBtn").click(function () {
                 forecastHumidityArray.push(data.list[i].main.humidity);
                 var date = new Date(data.list[i].dt*1000);
                 console.log(date.toLocaleDateString("en-US"));
+                console.log(moment(data.list[i].dt).format("M/D/YY"))
                 forecastDateArray.push(date.toLocaleDateString("en-US"));
             }
+            for (var i = 0; i < forecastConditionArray.length; i++) {
+                if (forecastConditionArray[i] === "clear sky") {
+                        
+                }
+            }
             console.log(forecastDateArray)
-            // $("#dateOne").text(forecastDateArray[0]);
-            // $("#dateTwo").text(forecastDateArray[1]);
-            // $("#dateThree").text(forecastDateArray[2]);
-            // $("#dateFour").text(forecastDateArray[3]);
-            // $("#dateFive").text(forecastDateArray[4]);
-            // $("#conditionOne").text(forecastDateArray[0]);
-            // $("#conditionTwo").text(forecastDateArray[1]);
-            // $("#Three").text(forecastDateArray[2]);
-            // $("#dateFour").text(forecastDateArray[3]);
-            // $("#dateFive").text(forecastDateArray[4]);
             $("#tempOne").text(forecastTempArray[0] + " °F");
             $("#tempTwo").text(forecastTempArray[1] + " °F");
             $("#tempThree").text(forecastTempArray[2] + " °F");
