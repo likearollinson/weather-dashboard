@@ -33,7 +33,7 @@ $("#searchBtn").click(function () {
         .then(function (data) {
             for (i = 1; i < 6; i++) {
                 forecastDateArray.push(data.list[i].dt);
-                forecastConditionArray.push(data.list[i].weather[0].description);
+                forecastConditionArray.push(data.list[i].weather[0].main);
                 forecastTempArray.push(data.list[i].main.temp);
                 forecastWindArray.push(data.list[i].wind.speed);
                 forecastHumidityArray.push(data.list[i].main.humidity);
@@ -46,19 +46,26 @@ $("#searchBtn").click(function () {
             console.log(forecastHumidityArray);
             
             for (var i = 0; i < forecastConditionArray.length; i++) {
-                if (forecastConditionArray[i] === "clear sky") {
+                if (forecastConditionArray[i] === "Clear") {
                     forecastImageArray.push("./assets/images/sunny.jpg");
-                } else if (forecastConditionArray[i] === "few clouds" || forecastConditionArray[i] === "scattered clouds") {
-                    forecastImageArray.push("./assets/images/partially cloudy.jpg");
-                } else if (forecastConditionArray[i] === "broken clouds") {
+                } else if (forecastConditionArray[i] === "Clouds") {
                     forecastImageArray.push("./assets/images/cloudy.jpg");
-                } else if (forecastConditionArray[i] === "shower rain" || forecastConditionArray[i] ==="rain") {
+                } else if (forecastConditionArray[i] ==="Rain") {
                     forecastImageArray.push("assets/images/rainy.jpg")
-                } else if (forecastConditionArray[i] === "thunderstorm") {
+                } else if (forecastConditionArray[i] === "Thunderstorm") {
                     forecastImageArray.push("./assets/images/lightning.jpg")
+                } else if (forecastConditionArray[i] === "Drizzle") {
+                    forecastImageArray.push("./assets/images/drizzle.jpg")
+                } else if (forecastConditionArray[i] === "Snow") {
+                    forecastImageArray.push("./assets/images/snow.jpg")
                 }
             }
             console.log(forecastImageArray);    
+            $("#day-one-image").attr("src",forecastImageArray[0])
+            $("#day-two-image").attr("src",forecastImageArray[1])
+            $("#day-three-image").attr("src",forecastImageArray[2])
+            $("#day-four-image").attr("src",forecastImageArray[3])
+            $("#day-five-image").attr("src",forecastImageArray[4])
             $("#tempOne").text(forecastTempArray[0] + " °F");
             $("#tempTwo").text(forecastTempArray[1] + " °F");
             $("#tempThree").text(forecastTempArray[2] + " °F");
