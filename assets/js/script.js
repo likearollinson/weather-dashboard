@@ -32,11 +32,13 @@ $("#searchBtn").click(function () {
         })
         .then(function (data) {
             for (i = 1; i < 6; i++) {
-                forecastDateArray.push(data.list[i].dt);
-                forecastConditionArray.push(data.list[i].weather[0].main);
-                forecastTempArray.push(data.list[i].main.temp);
-                forecastWindArray.push(data.list[i].wind.speed);
-                forecastHumidityArray.push(data.list[i].main.humidity);
+                j = (i*8)-1;
+                console.log(j);
+                forecastDateArray.push(moment.unix(data.list[j].dt).format("dd M/D/YY"));
+                forecastConditionArray.push(data.list[j].weather[0].main);
+                forecastTempArray.push(data.list[j].weather[0].main.temp);
+                forecastWindArray.push(data.list[j].wind.speed);
+                forecastHumidityArray.push(data.list[j].main.humidity);
 
             }
             console.log(forecastDateArray);
@@ -61,6 +63,11 @@ $("#searchBtn").click(function () {
                 }
             }
             console.log(forecastImageArray);    
+            $("#dateOne").text(forecastDateArray[0]);
+            $("#dateTwo").text(forecastDateArray[1]);
+            $("#dateThree").text(forecastDateArray[2]);
+            $("#dateFour").text(forecastDateArray[3]);
+            $("#dateFive").text(forecastDateArray[4]);
             $("#day-one-image").attr("src",forecastImageArray[0])
             $("#day-two-image").attr("src",forecastImageArray[1])
             $("#day-three-image").attr("src",forecastImageArray[2])
