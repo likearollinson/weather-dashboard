@@ -14,34 +14,34 @@
 <body>
     <header id="headerContainer" class="container">
         <h1 id="headerText" class="center-align">Weather Dashboard</h1>
+        <h3 id="cityDate" class="center-align"></h3>
+        <img id="currentConditions" class="center-image" src=""></img>
     </header>
     <main id="mainContainer">
         <div class="row">
-            <div class="col s12 m4 l3 xl2">
+            <div id="searchContainer" class="col s12 m4 l3 xl2">
                 <h5 class="center-align">Search for a City:</h5>
                 <input type="text" class="form-input w-100" id="citySearch" name="citySearch" placeholder="Raleigh" />
                 <button class="waves-effect waves-light btn" id="searchBtn">
                     Search
                 </button>
             </div>
-
-            <h3 id="cityDate"></h3>
             <div class="col s12 m8 l9 xl10">
                 <table>
                     <thead>
                         <tr>
-                            <th>Temp</th>
-                            <th>Wind</th>
-                            <th>Humidity</th>
-                            <!-- <th>UV Index</th> -->
+                            <th class="center-align">Temp</th>
+                            <th class="center-align">Wind</th>
+                            <th class="center-align">Humidity</th>
+                            <th class="center-align">UV Index</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td id="currentTemp"></td>
-                            <td id="currentWind"></td>
-                            <td id="currentHumidity"></td>
-                            <!-- <td id="currentUV"></td> -->
+                            <td class="center-align" id="currentTemp"></td>
+                            <td class="center-align" id="currentWind"></td>
+                            <td class="center-align" id="currentHumidity"></td>
+                            <td class="center-align" id="currentUV"></td>
                             <td></td>
                         </tr>
                     </tbody>
@@ -57,19 +57,19 @@
                             <table>
                                 <tbody>
                                     <tr>
-                                        <td>Date</td>
-                                        <td id="dateOne"></td>
+                                        <td class="bold-text">Date</td>
+                                        <td class="bold-text" id="dateOne"></td>
                                     </tr>
                                     <tr>
-                                        <td>Temp</td>
+                                        <td class="bold-text">Temp</td>
                                         <td id="tempOne"></td>
                                     </tr>
                                     <tr>
-                                        <td>Wind</td>
+                                        <td class="bold-text">Wind</td>
                                         <td id="windOne"></td>
                                     </tr>
                                     <tr>
-                                        <td>Humidity</td>
+                                        <td class="bold-text">Humidity</td>
                                         <td id="humidityOne"></td>
                                     </tr>
                                 </tbody>
@@ -87,19 +87,19 @@
                             <table>
                                 <tbody>
                                     <tr>
-                                        <td>Date</td>
-                                        <td id="dateTwo"></td>
+                                        <td class="bold-text">Date</td>
+                                        <td class="bold-text" id="dateTwo"></td>
                                     </tr>
                                     <tr>
-                                        <td>Temp</td>
+                                        <td class="bold-text">Temp</td>
                                         <td id="tempTwo"></td>
                                     </tr>
                                     <tr>
-                                        <td>Wind</td>
+                                        <td class="bold-text">Wind</td>
                                         <td id="windTwo"></td>
                                     </tr>
                                     <tr>
-                                        <td>Humidity</td>
+                                        <td class="bold-text">Humidity</td>
                                         <td id="humidityTwo"></td>
                                     </tr>
                                 </tbody>
@@ -117,19 +117,19 @@
                             <table>
                                 <tbody>
                                     <tr>
-                                        <td>Date</td>
-                                        <td id="dateThree"></td>
+                                        <td class="bold-text">Date</td>
+                                        <td class="bold-text" id="dateThree"></td>
                                     </tr>
                                     <tr>
-                                        <td>Temp</td>
+                                        <td class="bold-text">Temp</td>
                                         <td id="tempThree"></td>
                                     </tr>
                                     <tr>
-                                        <td>Wind</td>
+                                        <td class="bold-text">Wind</td>
                                         <td id="windThree"></td>
                                     </tr>
                                     <tr>
-                                        <td>Humidity</td>
+                                        <td class="bold-text">Humidity</td>
                                         <td id="humidityThree"></td>
                                     </tr>
                                 </tbody>
@@ -147,19 +147,19 @@
                             <table>
                                 <tbody>
                                     <tr>
-                                        <td>Date</td>
-                                        <td id="dateFour"></td>
+                                        <td class="bold-text">Date</td>
+                                        <td class="bold-text" id="dateFour"></td>
                                     </tr>
                                     <tr>
-                                        <td>Temp</td>
+                                        <td class="bold-text">Temp</td>
                                         <td id="tempFour"></td>
                                     </tr>
                                     <tr>
-                                        <td>Wind</td>
+                                        <td class="bold-text">Wind</td>
                                         <td id="windFour"></td>
                                     </tr>
                                     <tr>
-                                        <td>Humidity</td>
+                                        <td class="bold-text">Humidity</td>
                                         <td id="humidityFour"></td>
                                     </tr>
                                 </tbody>
@@ -177,19 +177,19 @@
                             <table>
                                 <tbody>
                                     <tr>
-                                        <td>Date</td>
-                                        <td id="dateFive"></td>
+                                        <td class="bold-text">Date</td>
+                                        <td class="bold-text" id="dateFive"></td>
                                     </tr>
                                     <tr>
-                                        <td>Temp</td>
+                                        <td class="bold-text">Temp</td>
                                         <td id="tempFive"></td>
                                     </tr>
                                     <tr>
-                                        <td>Wind</td>
+                                        <td class="bold-text">Wind</td>
                                         <td id="windFive"></td>
                                     </tr>
                                     <tr>
-                                        <td>Humidity</td>
+                                        <td class="bold-text">Humidity</td>
                                         <td id="humidityFive"></td>
                                     </tr>
                                 </tbody>
