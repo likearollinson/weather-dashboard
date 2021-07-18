@@ -102,23 +102,23 @@ var clickBtn = function() {
                     })
                     .then(function (data) {
                         $("#currentUV").text(data.current.uvi);
+                        console.log($("#currentUV").val());
+                        if (data.current.uvi < 2) {
+                            $("#currentUV").css("background-color","green");
+                        } else if (data.current.uvi < 8) {
+                            $("#currentUV").css("background-color","orange");
+                        } else {
+                            $("#currentUV").css("background-color","red");
+                        }
+                
                     });
             });
-        
-        // if (parseInt($("#currentUV")).val() < 2) {
-        //     $("#currentUV").val().css("background-color","green")
-        // } else if (parseInt($("#currentUV")).val() < 8) {
-        //     $("#currentUV").css("background-color","orange")
-        // } else {
-        //     $("#currentUV").css("background-color","red")
-        // }
-
         cityListArray.push($("#citySearch").val());
         console.log(cityListArray)
         
         var cityCreateBtns = function() {
             $("#searchContainer").append($("<button class='waves-effect waves-light btn' id='btn" + $("#citySearch").val() + "'></button>"));
-            $("#btn" + $("#citySearch").val()).text($($("#citySearch").val()));
+            $("#btn" + $("#citySearch").val()).text("" + $("#citySearch").val() + "");
         }
         cityCreateBtns();
     });
