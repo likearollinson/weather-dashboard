@@ -19,13 +19,11 @@ var clickBtn = function() {
                 return response.json();
             })
             .then(function (data) {
-                icon= "https://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png"
                 $("#currentTemp").text(data.main.temp + " °F")
                 $("#currentWind").text(data.wind.speed + " MPH")
                 $("#currentHumidity").text(data.main.humidity + "%")
-                $("#currentCondition").attr("src",icon)
-                $("#cityDate").text(data.name + " " + currentDay)
-                
+                $("#currentConditions").attr("src","./assets/images/" + data.weather[0].icon + ".png")
+                $("#cityDate").text(data.name + " " + currentDay)   
             })
         var forecastRequestURL = forecastURL + $("#citySearch").val() + "&units=imperial" + APIkey
         fetch(forecastRequestURL)
@@ -115,9 +113,9 @@ var clickBtn = function() {
             });
         cityListArray.push($("#citySearch").val());
         console.log(cityListArray)
-        
+        $("#searchContainer").append("<p>" + $("#citySearch").val() + "</p>")
         var cityCreateBtns = function() {
-            $("#searchContainer").append($("<button class='waves-effect waves-light btn' id='btn" + $("#citySearch").val() + "'></button>"));
+            $("#searchContainer").append("<button class='waves-effect waves-light btn' id='btn" + $("#citySearch").val() + "'></button>");
             $("#btn" + $("#citySearch").val()).text("" + $("#citySearch").val() + "");
         }
         cityCreateBtns();
