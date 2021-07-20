@@ -113,13 +113,36 @@ var clickBtn = function() {
                     });
             });
         var cityUpperCase = $("#citySearch").val().toUpperCase(); 
-        for (var i = 0; i < cityListArray.length; i++) {
-            if (cityListArray[i] === cityUpperCase) {
-                return(true);
-            } else {
+        // for (var i = 0; i < cityListArray.length; i++) {
+        //     if (cityListArray[i] === cityUpperCase) {
+        //         return(true);
+        //     } else {
+        //         cityListArray.push(cityUpperCase);
+        //     }
+        // }
+
+        // check if an element exists in array using a comparer function
+        // comparer : function(currentElement)
+        Array.prototype.inArray = function(comparer) { 
+            for(var i=0; i < cityListArray.length; i++) { 
+                if(comparer(cityListArray[i])) return true; 
+            }
+            return false; 
+        }; 
+
+        // adds an element to the array if it does not already exist using a comparer 
+        // function
+        Array.prototype.pushIfNotExist = function(cityUpperCase, comparer) { 
+            if (!cityListArray.inArray(comparer)) {
                 cityListArray.push(cityUpperCase);
             }
-        }
+        }; 
+        console.log(cityListArray)
+// var array = [{ name: "tom", text: "tasty" }];
+// var element = { name: "tom", text: "tasty" };
+// array.pushIfNotExist(element, function(e) { 
+//     return e.name === element.name && e.text === element.text; 
+// });
 
         console.log(cityListArray);
         var cityNoSpaces = cityUpperCase.replace(/ /g,"");
