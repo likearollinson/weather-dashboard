@@ -4,4 +4,4 @@ This is a simple weather app that shows the current weather based on a search by
 
 [Link to Live Application](https://likearollinson.github.io/unc-hw-6-weather-dashboard/)
 
-![A simple weather app](./assets/images/screenshot.jpg)
+![A simple weather app](./assets/images/screenshot.png)
